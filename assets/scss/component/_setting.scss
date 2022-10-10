@@ -1,0 +1,340 @@
+@use "./variables" as *;
+.setting {
+  .navigat {
+    // start sidebar //
+
+    .sidebar {
+      width: 200px;
+      @media (max-width: 568px) {
+        width: 70px;
+      }
+      h1 {
+        @media (max-width: 568px) {
+          font-size: 13px !important;
+          padding: 0 !important;
+        }
+      }
+      h1::after,
+      h1::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: 568px) {
+          display: none;
+        }
+      }
+      h1::after {
+        width: 100px;
+        height: 2px;
+      }
+      h1::before {
+        width: 25px;
+        height: 25px;
+        border: 5px solid white;
+        border-radius: 50%;
+        z-index: 5;
+      }
+      a {
+        transition: 0.3s;
+        span {
+          font-size: 14px;
+        }
+        svg {
+          margin-right: 15px;
+        }
+      }
+      a.active,
+      a:hover,
+      a:focus {
+        background-color: #f6f6f6;
+      }
+    }
+
+    // end sidebar //
+
+    // start content //
+
+    .content-setting {
+      width: calc(100% - 200px);
+      @media (max-width: 568px) {
+        width: calc(100% - 70px);
+      }
+
+      // start navbar //
+
+      .search {
+        input {
+          font-size: 13px;
+          outline: none;
+          padding-left: 30px !important;
+        }
+        svg {
+          position: absolute;
+          left: 0;
+          top: 27%;
+          padding-left: 7px;
+          color: rgb(0, 0, 0, 0.4);
+        }
+      }
+      .notifications {
+        a {
+          svg {
+            font-size: 23px;
+            padding-top: 4px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+            margin-left: 10px;
+          }
+        }
+        a::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+          left: 28%;
+          top: 0;
+          border-radius: 50%;
+        }
+      }
+
+      // end navbar //
+
+      // start section-setting //
+      .section-setting {
+        background-color: #f1f5f9;
+        h2 {
+          width: fit-content;
+        }
+        h2::after,
+        h2::before {
+          content: "";
+          position: absolute;
+          transform: translate(-50%, -50%);
+          height: 3px;
+          top: 100%;
+          @media (max-width: 568px) {
+            display: none;
+          }
+        }
+        h2::after {
+          background-color: black;
+          width: 60px;
+          left: 24%;
+        }
+        h2::before {
+          background-color: white;
+          width: 129px;
+          left: 50%;
+        }
+
+        // start section //
+        .section {
+          .col-md-6 {
+            @media (max-width: 1300px) {
+              width: 50%;
+            }
+          }
+          .col-12 {
+            @media (max-width: 992px) {
+              width: 100%;
+            }
+          }
+          .column {
+            min-height: 400px;
+            @media (max-width: 1300px) {
+              padding: 7px !important;
+            }
+            @media (max-width: 992px) {
+              padding: 10px !important;
+            }
+
+            // start Site-Control //
+
+            .Site-Control {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              .form-check-input {
+                width: 55px;
+                height: 25px;
+                margin-left: 5px;
+              }
+              textarea {
+                font-size: 13px;
+                outline: none;
+                resize: none;
+                min-height: 150px;
+                border-width: 1px;
+              }
+            }
+
+            // end Site-Control //
+            // start General Info //
+
+            .General-Info {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              label {
+                color: gray;
+                font-size: 14px;
+              }
+              input {
+                border: 1px solid #ccc;
+                outline: none;
+                box-shadow: none;
+                font-size: 14px;
+              }
+              input[type="email"] {
+                width: calc(100% - 80px);
+                background-color: #f0f4f8;
+              }
+            }
+
+            // end General Info //
+            // start Security Info //
+
+            .Security-Info {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              .form-check-input {
+                width: 55px;
+                height: 25px;
+                margin-left: 5px;
+              }
+              &:first-child a {
+                @media (max-width: 768px) {
+                  padding: 5px !important;
+                  font-size: 13px;
+                }
+              }
+              &:last-child a {
+                background-color: #eeeeee;
+              }
+            }
+
+            // end Security Info //
+            // start Social  Info //
+
+            .Social-Info {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              input {
+                font-size: 13px;
+                box-shadow: none;
+                outline: none;
+                background-color: #f6f6f6;
+                border: 1px solid #ddd;
+                padding: 13px;
+              }
+              span {
+                background-color: #f6f6f6;
+                opacity: 0.5;
+              }
+              a {
+                transition: 0.3s;
+              }
+              .input-group:focus-within span {
+                opacity: 1;
+              }
+            }
+
+            // end Social  Info //
+            // start Widgets Control //
+
+            .Widgets-Control {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              input {
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+              }
+            }
+
+            // end Widgets Control //
+            // start Backup-Manager //
+
+            .Backup-Manager {
+              p {
+                font-size: 14px;
+                color: #888;
+              }
+              input {
+                appearance: none;
+              }
+              .lab {
+                padding-left: 35px;
+                cursor: pointer;
+              }
+              .lab::before {
+                content: "";
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                border: 1px solid gray;
+                left: 0;
+                border-radius: 50%;
+              }
+              .lab::after {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: 11px;
+                top: 11px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #3c6efd;
+                transition: 0.3s;
+                transform: scale(0);
+              }
+              input:checked + .lab::before {
+                border: 1px solid #3c6efd;
+              }
+              input:checked + .lab::after {
+                transform: none;
+                transform: translate(-50%, -50%);
+              }
+              .servers {
+                border-top: 1px solid #eee;
+                @media (max-width: 767px) {
+                  flex-wrap: wrap;
+                }
+                .server {
+                  border: 1px solid #eee;
+                  label {
+                    cursor: pointer;
+                  }
+                }
+                input:checked + .server {
+                  border-color: #3c6efd;
+                  color: #3c6efd;
+                }
+              }
+            }
+
+            // end Backup-Manager //
+          }
+        }
+
+        // end section //
+      }
+      // end section-setting //
+    }
+  }
+}
