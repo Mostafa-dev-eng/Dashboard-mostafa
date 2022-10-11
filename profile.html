@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="./assets/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -122,10 +122,286 @@
           </nav>
           <!-- end navbar -->
           <!-- start section profile -->
-          <div class="p-3 section-profile">
-            <h2 class="fw-bold position-relative pb-2 mb-4">Dashboard</h2>
+          <div class="section-profile">
+            <h2 class="fw-bold position-relative pb-2 mb-4 ms-4 pt-4">
+              Profile
+            </h2>
             <!-- start section -->
-            <div class="row section"></div>
+            <div class="d-flex flex-wrap section">
+              <!-- start profile-Control -->
+
+              <div class="col col-12 p-3 column">
+                <div class="bg-white h-100 profile-Control rounded">
+                  <!-- Start Overview -->
+                  <div class="overview d-flex align-items-center">
+                    <div class="avatar-box text-center p-5 pt-4 pb-4">
+                      <img class="mb-3" src="./assets/img/avatar.png" alt="" />
+                      <h3 class="m-0 fw-bold fs-6">Mostafa Amin</h3>
+                      <p class="mt-2">Level 20</p>
+                      <div
+                        class="progress ms-auto me-auto"
+                        style="height: 5px; width: 100%"
+                      >
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          aria-label="Example 1px high"
+                          style="width: 70%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+
+                      <div class="rating mt-2 mb-2">
+                        <i class="fa-solid fa-star c-orange fs-13"></i>
+                        <i class="fa-solid fa-star c-orange fs-13"></i>
+                        <i class="fa-solid fa-star c-orange fs-13"></i>
+                        <i class="fa-solid fa-star c-orange fs-13"></i>
+                        <i class="fa-solid fa-star c-orange fs-13"></i>
+                      </div>
+                      <p class="m-0">550 Rating</p>
+                    </div>
+                    <div class="info-box w-100 text-center text-md-start">
+                      <!-- Start Information Row -->
+                      <div class="box d-flex align-items-center flex-wrap p-3">
+                        <h4 class="m-0 w-100">General Information</h4>
+                        <div class="fs-14 pt-2">
+                          <span class="">Full Name</span>
+                          <span>Osama Mohamed</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span class="">Gender:</span>
+                          <span>Male</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span class="">Country:</span>
+                          <span>Egypt</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="flexSwitchCheckChecked"
+                              checked
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Information Row -->
+                      <!-- Start Information Row -->
+                      <div
+                        class="box p-20 d-flex align-items-center flex-wrap p-3"
+                      >
+                        <h4 class="m-0 w-100">Personal Information</h4>
+                        <div class="fs-14 pt-2">
+                          <span>Email:</span>
+                          <span>o@nn.sa</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Phone:</span>
+                          <span>019123456789</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Date Of Birth:</span>
+                          <span>25/10/1982</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="flexSwitchCheckChecked"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Information Row -->
+                      <!-- Start Information Row -->
+                      <div
+                        class="box p-20 d-flex align-items-center flex-wrap p-3"
+                      >
+                        <h4 class="m-0 w-100">Job Information</h4>
+                        <div class="fs-14 pt-2">
+                          <span>Title:</span>
+                          <span>Full Stack Developer</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Programming Language:</span>
+                          <span>Python</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Years Of Experience:</span>
+                          <span>15+</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="flexSwitchCheckChecked"
+                              checked
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Information Row -->
+                      <!-- Start Information Row -->
+                      <div
+                        class="box p-20 d-flex align-items-center flex-wrap p-3"
+                      >
+                        <h4 class="m-0 w-100">Billing Information</h4>
+                        <div class="fs-14 pt-2">
+                          <span>Payment Method:</span>
+                          <span>Paypal</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Email:</span>
+                          <span>email@website.com</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <span>Subscription:</span>
+                          <span>Monthly</span>
+                        </div>
+                        <div class="fs-14 pt-2">
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="flexSwitchCheckChecked"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- End Information Row -->
+                    </div>
+                  </div>
+                  <!-- End Overview -->
+                </div>
+              </div>
+
+              <!-- end profile-Control -->
+              <!-- start Skills -->
+
+              <div class="col col-md-4 col-12 p-3 pt-0 column">
+                <div class="bg-white h-100 skils-Control rounded p-3">
+                  <h3 class="mt-0 fs-3 fw-bold">My Skills</h3>
+                  <p>Complete Skills List</p>
+                  <div class="skills-card">
+                    <ul class="m-0">
+                      <li>
+                        <span class="badge me-2">Html</span>
+                        <span class="badge me-2">Pugjs</span>
+                        <span class="badge me-2">HAML</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">CSS</span
+                        ><span class="badge me-2">SASS</span
+                        ><span class="badge me-2">Stylus</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">JavaScript</span
+                        ><span class="badge me-2">TypeScript</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">Vuejs</span
+                        ><span class="badge me-2">Reactjs</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">Jest</span
+                        ><span class="badge me-2">Jasmine</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">PHP</span
+                        ><span class="badge me-2">Laravel</span>
+                      </li>
+                      <hr class="mt-3 mb-3" />
+                      <li>
+                        <span class="badge me-2">Python</span
+                        ><span class="badge me-2">Django</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end Skills -->
+              <!-- start Latest Activities -->
+
+              <div class="col col-md-8 col-12 p-3 ps-0 pt-0 column">
+                <div class="bg-white h-100 active-Control rounded p-3">
+                  <h3 class="mt-0 fs-3 fw-bold">Latest Activities</h3>
+                  <p>Latest Activities Done By The User</p>
+                  <div class="activities p-20 bg-white rad-10 mt-20">
+                    <div
+                      class="activity d-flex align-items-center text-center text-md-start"
+                    >
+                      <img src="./assets/img/activity-01.png" alt="" />
+                      <div class="info">
+                        <span class="d-block mb-2 fw-bold">Store</span>
+                        <span class="c-grey"
+                          >Bought The Mastering Python Course</span
+                        >
+                      </div>
+                      <div class="date ms-auto text-end">
+                        <span class="d-block mb-2 fw-bold">18:10</span>
+                        <span class="c-grey">Yesterday</span>
+                      </div>
+                    </div>
+                    <hr class="mt-4 mb-4" />
+                    <div
+                      class="activity d-flex align-items-center text-center text-md-start"
+                    >
+                      <img src="./assets/img/activity-02.png" alt="" />
+                      <div class="info">
+                        <span class="d-block mb-2 fw-bold">Academy</span>
+                        <span class="c-grey">Got The PHP Certificate</span>
+                      </div>
+                      <div class="date ms-auto text-end">
+                        <span class="d-block mb-2 fw-bold">16:05</span>
+                        <span class="c-grey">Yesterday</span>
+                      </div>
+                    </div>
+                    <hr class="mt-4 mb-4" />
+                    <div
+                      class="activity d-flex align-items-center text-center text-md-start"
+                    >
+                      <img src="./assets/img/activity-03.png" alt="" />
+                      <div class="info">
+                        <span class="d-block mb-2 fw-bold">Badges</span>
+                        <span class="c-grey">Unlocked The 10 Skills Badge</span>
+                      </div>
+                      <div class="date ms-auto text-end">
+                        <span class="d-block mb-2 fw-bold">18:05</span>
+                        <span class="c-grey">Yesterday</span>
+                      </div>
+                    </div>
+                    <hr class="mt-4 mb-4" />
+                    <div
+                      class="activity d-flex align-items-center text-center text-md-start"
+                    >
+                      <img src="./assets/img/activity-01.png" alt="" />
+                      <div class="info">
+                        <span class="d-block mb-2 fw-bold">Store</span>
+                        <span class="c-grey">Bought The Typescript Course</span>
+                      </div>
+                      <div class="date ms-auto text-end">
+                        <span class="d-block mb-2 fw-bold">12:05</span>
+                        <span class="c-grey">Yesterday</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Latest Activities -->
+            </div>
+
             <!-- end section -->
           </div>
           <!-- end section profile -->

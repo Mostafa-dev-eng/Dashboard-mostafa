@@ -1038,8 +1038,8 @@ header .navigat .content article .section .table-project .project .project-table
 .setting .navigat .content-setting .section-setting .section .column .Backup-Manager .lab::after {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   left: 11px;
   top: 11px;
   border-radius: 50%;
@@ -1200,13 +1200,162 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .profile .navigat .content-profile .section-profile h2::after {
   background-color: black;
-  width: 60px;
-  left: 24%;
+  width: 50px;
+  left: 26%;
 }
 .profile .navigat .content-profile .section-profile h2::before {
   background-color: white;
-  width: 150px;
+  width: 100px;
   left: 50%;
+}
+@media (max-width: 1300px) {
+  .profile .navigat .content-profile .section-profile .section .column {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .column {
+    padding: 14px !important;
+  }
+}
+@media (max-width: 1300px) {
+  .profile .navigat .content-profile .section-profile .section .col-md-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .col-12 {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .profile .navigat .content-profile .section-profile .section .profile-Control .overview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (min-width: 767px) {
+  .profile .navigat .content-profile .section-profile .section .profile-Control .overview .avatar-box {
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
+  }
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .avatar-box img {
+  width: 120px;
+  height: 120px;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .avatar-box p {
+  font-size: 14px;
+  color: gray;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .avatar-box .rating svg {
+  color: #ee9e1e;
+  font-size: 13px;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box:hover {
+  background-color: #f9f9f9;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box h4 {
+  color: gray;
+  font-size: 16px;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 {
+  min-width: 250px;
+}
+@media (max-width: 767px) {
+  .profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 {
+    width: 100%;
+  }
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 span:first-child {
+  font-size: 14px;
+  color: gray;
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 span:last-child {
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 .form-check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.profile .navigat .content-profile .section-profile .section .profile-Control .overview .info-box .box .fs-14 .form-check-input {
+  width: 60px;
+  height: 20px;
+}
+.profile .navigat .content-profile .section-profile .section .skils-Control p {
+  font-size: 14px;
+  color: #888;
+}
+.profile .navigat .content-profile .section-profile .section .skils-Control .skills-card ul {
+  list-style: none;
+  padding: 0;
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .skils-Control .skills-card ul {
+    text-align: center;
+  }
+}
+.profile .navigat .content-profile .section-profile .section .skils-Control .skills-card ul .badge {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #eeeeee;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.profile .navigat .content-profile .section-profile .section .skils-Control .skills-card ul hr {
+  opacity: 0.1;
+}
+.profile .navigat .content-profile .section-profile .section .active-Control p {
+  font-size: 14px;
+  color: #888;
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .active-Control .activities .activity {
+    text-align: center !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.profile .navigat .content-profile .section-profile .section .active-Control .activities .activity img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+.profile .navigat .content-profile .section-profile .section .active-Control .activities .activity .c-grey {
+  color: gray;
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .active-Control .activities .activity .date {
+    margin: 10px auto;
+    text-align: center !important;
+  }
+}
+@media (max-width: 992px) {
+  .profile .navigat .content-profile .section-profile .section .active-Control .activities .activity .info {
+    margin: 10px 0 0 0;
+  }
+}
+.profile .navigat .content-profile .section-profile .section .active-Control .activities hr {
+  opacity: 0.1;
 }
 
 .projects .navigat .sidebar {

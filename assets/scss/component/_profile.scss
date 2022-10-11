@@ -1,143 +1,301 @@
 @use "./variables" as *;
 .profile {
-    .navigat {
-      // start sidebar //
-  
-      .sidebar {
-        width: 200px;
+  .navigat {
+    // start sidebar //
+
+    .sidebar {
+      width: 200px;
+      @media (max-width: 568px) {
+        width: 70px;
+      }
+      h1 {
         @media (max-width: 568px) {
-          width: 70px;
+          font-size: 13px !important;
+          padding: 0 !important;
         }
-        h1 {
-          @media (max-width: 568px) {
-            font-size: 13px !important;
-            padding: 0 !important;
+      }
+      h1::after,
+      h1::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: 568px) {
+          display: none;
+        }
+      }
+      h1::after {
+        width: 100px;
+        height: 2px;
+      }
+      h1::before {
+        width: 25px;
+        height: 25px;
+        border: 5px solid white;
+        border-radius: 50%;
+        z-index: 5;
+      }
+      a {
+        transition: 0.3s;
+        span {
+          font-size: 14px;
+        }
+        svg {
+          margin-right: 15px;
+        }
+      }
+      a.active,
+      a:hover,
+      a:focus {
+        background-color: #f6f6f6;
+      }
+    }
+
+    // end sidebar //
+
+    // start content //
+
+    .content-profile {
+      width: calc(100% - 200px);
+      @media (max-width: 568px) {
+        width: calc(100% - 70px);
+      }
+
+      // start navbar //
+
+      .search {
+        input {
+          font-size: 13px;
+          outline: none;
+          padding-left: 30px !important;
+        }
+        svg {
+          position: absolute;
+          left: 0;
+          top: 27%;
+          padding-left: 7px;
+          color: rgb(0, 0, 0, 0.4);
+        }
+      }
+      .notifications {
+        a {
+          svg {
+            font-size: 23px;
+            padding-top: 4px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+            margin-left: 10px;
           }
         }
-        h1::after,
-        h1::before {
+        a::before {
           content: "";
           position: absolute;
-          background-color: black;
-          top: 100%;
-          left: 50%;
+          width: 10px;
+          height: 10px;
+          background-color: red;
+          left: 28%;
+          top: 0;
+          border-radius: 50%;
+        }
+      }
+
+      // end navbar //
+
+      // start section-profile //
+      .section-profile {
+        background-color: #f1f5f9;
+        h2 {
+          width: fit-content;
+        }
+        h2::after,
+        h2::before {
+          content: "";
+          position: absolute;
           transform: translate(-50%, -50%);
+          height: 3px;
+          top: 100%;
           @media (max-width: 568px) {
             display: none;
           }
         }
-        h1::after {
+        h2::after {
+          background-color: black;
+          width: 50px;
+          left: 26%;
+        }
+        h2::before {
+          background-color: white;
           width: 100px;
-          height: 2px;
+          left: 50%;
         }
-        h1::before {
-          width: 25px;
-          height: 25px;
-          border: 5px solid white;
-          border-radius: 50%;
-          z-index: 5;
-        }
-        a {
-          transition: 0.3s;
-          span {
-            font-size: 14px;
+
+        // start section //
+        .section {
+          .column {
+            @media (max-width: 1300px) {
+              padding: 10px !important;
+            }
+            @media (max-width: 992px) {
+              padding: 14px !important;
+            }
           }
-          svg {
-            margin-right: 15px;
+          .col-md-6 {
+            @media (max-width: 1300px) {
+              width: 50%;
+            }
           }
+          .col-12 {
+            @media (max-width: 992px) {
+              width: 100%;
+            }
+          }
+
+          // start profile-Control //
+
+          .profile-Control {
+            .overview {
+              @media (max-width: 767px) {
+                flex-direction: column;
+              }
+              .avatar-box {
+                @media (min-width: 767px) {
+                  border-right: 1px solid rgba(128, 128, 128, 0.1);
+                }
+                img {
+                  width: 120px;
+                  height: 120px;
+                }
+                p {
+                  font-size: 14px;
+                  color: gray;
+                }
+                .rating {
+                  svg {
+                    color: #ee9e1e;
+                    font-size: 13px;
+                  }
+                }
+              }
+              .info-box {
+                .box {
+                  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+                  transition: 0.3s;
+                  &:hover {
+                    background-color: #f9f9f9;
+                  }
+                  h4 {
+                    color: gray;
+                    font-size: 16px;
+                  }
+                  .fs-14 {
+                    min-width: 250px;
+                    @media (max-width: 767px) {
+                      width: 100%;
+                    }
+                    span:first-child {
+                      font-size: 14px;
+                      color: gray;
+                    }
+                    span:last-child {
+                      font-size: 14px;
+                      color: black;
+                      font-weight: 600;
+                    }
+                    .form-check {
+                      @media (max-width: 767px) {
+                        display: flex;
+                        justify-content: center;
+                      }
+                    }
+                    .form-check-input {
+                      width: 60px;
+                      height: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          // end profile-Control //
+          // start Skills //
+
+          .skils-Control {
+            p {
+              font-size: 14px;
+              color: #888;
+            }
+            .skills-card {
+              ul {
+                list-style: none;
+                padding: 0;
+                @media (max-width: 992px) {
+                  text-align: center;
+                }
+                .badge {
+                  width: fit-content;
+                  background-color: #eeeeee;
+                  color: rgb(0, 0, 0, 0.6);
+                  font-size: 14px;
+                  padding: 10px 10px;
+                  cursor: pointer;
+                }
+                hr {
+                  opacity: 0.1;
+                }
+              }
+            }
+          }
+
+          // end Skills //
+          // start Latest Activities //
+
+          .active-Control {
+            p {
+              font-size: 14px;
+              color: #888;
+            }
+            .activities {
+              .activity {
+                @media (max-width: 992px) {
+                  text-align: center !important;
+                  flex-direction: column;
+                }
+                img {
+                  width: 64px;
+                  height: 64px;
+                  margin-right: 10px;
+                }
+                .c-grey {
+                  color: gray;
+                }
+                .date {
+                  @media (max-width: 992px) {
+                    margin: 10px auto;
+                    text-align: center !important;
+                  }
+                }
+                .info {
+                  @media (max-width: 992px) {
+                    margin: 10px 0 0 0;
+                  }
+                }
+              }
+              hr {
+                opacity: 0.1;
+              }
+            }
+          }
+
+          // end Latest Activities //
         }
-        a.active,
-        a:hover,
-        a:focus {
-          background-color: #f6f6f6;
-        }
+        // end section //
       }
-  
-      // end sidebar //
-  
-      // start content //
-  
-      .content-profile {
-        width: calc(100% - 200px);
-        @media (max-width: 568px) {
-          width: calc(100% - 70px);
-        }
-  
-        // start navbar //
-  
-        .search {
-          input {
-            font-size: 13px;
-            outline: none;
-            padding-left: 30px !important;
-          }
-          svg {
-            position: absolute;
-            left: 0;
-            top: 27%;
-            padding-left: 7px;
-            color: rgb(0, 0, 0, 0.4);
-          }
-        }
-        .notifications {
-          a {
-            svg {
-              font-size: 23px;
-              padding-top: 4px;
-            }
-            img {
-              width: 32px;
-              height: 32px;
-              margin-left: 10px;
-            }
-          }
-          a::before {
-            content: "";
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: red;
-            left: 28%;
-            top: 0;
-            border-radius: 50%;
-          }
-        }
-  
-        // end navbar //
-  
-        // start section-profile //
-        .section-profile {
-          background-color: #f1f5f9;
-          h2 {
-            width: fit-content;
-          }
-          h2::after,
-          h2::before {
-            content: "";
-            position: absolute;
-            transform: translate(-50%, -50%);
-            height: 3px;
-            top: 100%;
-            @media (max-width: 568px) {
-              display: none;
-            }
-          }
-          h2::after {
-            background-color: black;
-            width: 60px;
-            left: 24%;
-          }
-          h2::before {
-            background-color: white;
-            width: 150px;
-            left: 50%;
-          }
-  
-          // start section //
-  
-          // end section //
-        }
-        // end section-profile //
-      }
+      // end section-profile //
     }
   }
+}
