@@ -108,6 +108,7 @@
         // start section-projects //
         .section-plans {
           background-color: #f1f5f9;
+          min-height: 92vh;
           h2 {
             width: fit-content;
           }
@@ -124,17 +125,128 @@
           }
           h2::after {
             background-color: black;
-            width: 60px;
-            left: 24%;
+            width: 50px;
+            left: 25%;
           }
           h2::before {
             background-color: white;
-            width: 150px;
-            left: 50%;
+            width: 100px;
+            left: 59%;
           }
   
           // start section //
-  
+          .section {
+            .col-md-6 {
+              @media (max-width: 1450px) {
+                width: 50%;
+              }
+            }
+            .col-12 {
+              @media (max-width: 992px) {
+                width: 100%;
+              }
+            }
+            .column {
+              @media (max-width: 1300px) {
+                padding: 7px !important;
+              }
+              @media (max-width: 992px) {
+                padding: 10px !important;
+              }
+            }
+            .plan {
+              ul {
+                list-style: none;
+                padding: 0;
+                li {
+                  border-bottom: 1px solid #eee;
+                  padding: 12px 0;
+                  display: flex;
+                  align-items: center;
+                  svg {
+                    color: red; 
+                  }
+                  .yes {
+                    color:#5fc65f ;
+                  }
+                  .help {
+                    color: gray;
+                    margin-left: auto;
+                  }
+                  
+                }
+              }
+            }
+            .green {
+              .top {
+                color: white;
+                background-color: #5fc65f;
+                border: 3px solid white;
+                outline: 3px solid #5fc65f;
+                .price {
+                  font-size: 40px;
+                  width: fit-content;
+                  span {
+                    font-size: 25px;
+                    position: absolute;
+                    left: -15px;
+                    top: 0;
+                  }
+                }
+              }
+              .bg-green {
+                background-color: #5fc65f;
+                width: fit-content;
+                padding: 10px;
+                font-size: 15px;
+              }
+            }
+            .blue {
+              .top {
+                color: white;
+                background-color: #3f75ff;
+                border: 3px solid white;
+                outline: 3px solid #3f75ff;
+                .price {
+                  font-size: 40px;
+                  width: fit-content;
+                  span {
+                    font-size: 25px;
+                    position: absolute;
+                    left: -15px;
+                    top: 0;
+                  }
+                }
+              }
+              .bg-blue {
+                background-color: #3f75ff;
+                width: fit-content;
+                padding: 10px;
+                font-size: 15px;
+              }
+            }
+            .orange {
+              .top {
+                color: white;
+                background-color: #ee9d1e;
+                border: 3px solid white;
+                outline: 3px solid #ee9d1e;
+                .price {
+                  font-size: 40px;
+                  width: fit-content;
+                  span {
+                    font-size: 25px;
+                    position: absolute;
+                    left: -15px;
+                    top: 0;
+                  }
+                }
+              }
+              p {
+                color: gray;
+              }
+            }
+          }
           // end section //
         }
         // end section-plans //

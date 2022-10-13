@@ -1,9 +1,11 @@
 @use "./variables" as *;
 .friends {
+  
     .navigat {
       // start sidebar //
   
       .sidebar {
+        min-height: 100vh;
         width: 200px;
         @media (max-width: 568px) {
           width: 70px;
@@ -108,6 +110,7 @@
         // start section-friends //
         .section-friends {
           background-color: #f1f5f9;
+          min-height: 92vh;
           h2 {
             width: fit-content;
           }
@@ -124,17 +127,111 @@
           }
           h2::after {
             background-color: black;
-            width: 60px;
-            left: 24%;
+            width: 50px;
+            left: 27%;
           }
           h2::before {
             background-color: white;
-            width: 150px;
+            width: 97px;
             left: 50%;
           }
   
           // start section //
-  
+
+          .section {
+            .column {
+              @media (min-width: 1620px) {
+                width: calc(100% / 5);
+              }
+              padding: 10px !important;
+              @media (max-width: 992px) {
+                padding: 14px !important;
+              }
+            }
+            .col-md-4 {
+              @media (max-width: 1360px) {
+                width: calc(100% / 3);
+              }
+            }
+            .col-md-4 {
+              @media (max-width: 1100px) {
+                width: calc(100% / 2);
+              }
+            }
+            .col-12 {
+              @media (max-width: 879px) {
+                width: 100%;
+              }
+            }
+            .Friends-Control {
+              .card {
+                .card-head {
+                  .card-img-top {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                  }
+                  p {
+                    font-size: 13px;
+                    color: gray;
+                    margin-bottom: 10px;
+                  }
+                }
+                .contact {
+                  border: 2px solid white;
+                  left: 8px;
+                  top: 8px;
+                  svg {
+                    background-color: #eeeeee;
+                    padding: 10px;
+                    font-size: 14px;
+                    border-radius: 50%;
+                    color: gray;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                      background-color: #3f75ff;
+                      color: white;
+                    }
+                  }
+                }
+                .card-body {
+                  .icon {
+                    svg {
+                      font-size: 14px;
+                      margin-right: 5px;
+                    }
+                    span {
+                      font-size: 14px;
+                      font-weight: 600;
+                    }
+                  }
+                  .vip {
+                    color: #fbeccc;
+                  }
+
+                }
+                hr {
+                  opacity: 0.1;
+                }
+                .badge-gro {
+                  span {
+                    color: gray;
+                    font-size: 13px;
+                  }
+                  .bg-blue {
+                    background-color: #3f75ff;
+                    padding: 7px;
+                  }
+                  .bg-red {
+                    background-color: #e74133;
+                    padding: 7px;
+                  }
+                }
+              }
+            }
+          }
+
           // end section //
         }
         // end section-friends //

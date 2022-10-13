@@ -15,6 +15,35 @@ a {
   text-decoration: none;
 }
 
+@-webkit-keyframes go-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes go-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 header .navigat .sidebar {
   width: 200px;
 }
@@ -1483,8 +1512,85 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .projects .navigat .content-projects .section-projects h2::before {
   background-color: white;
-  width: 150px;
+  width: 129px;
   left: 50%;
+}
+@media (max-width: 1300px) {
+  .projects .navigat .content-projects .section-projects .section .col-md-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .projects .navigat .content-projects .section-projects .section .col-12 {
+    width: 100%;
+  }
+}
+@media (max-width: 1300px) {
+  .projects .navigat .content-projects .section-projects .section .column {
+    padding: 7px !important;
+  }
+}
+@media (max-width: 992px) {
+  .projects .navigat .content-projects .section-projects .section .column {
+    padding: 10px !important;
+  }
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project p {
+  font-size: 14px;
+  color: gray;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .date {
+  font-size: 13px;
+  color: gray;
+  position: absolute;
+  right: -5px;
+  top: -15px;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .team img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: -20px;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .badge {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #eeeeee;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  padding: 7px 7px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project hr {
+  opacity: 0.1;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .info .prog {
+  height: 8px;
+  width: 260px;
+  position: relative;
+  border-radius: 6px;
+  background-color: #eeeeee;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .info .prog span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: red;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .info .prog .c-green {
+  background-color: green;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .info .prog .c-blue {
+  background-color: blue;
+}
+.projects .navigat .content-projects .section-projects .section .projects-page .project .info .badge {
+  color: gray;
+  background-color: white;
+  font-size: 14px;
 }
 
 .courses .navigat .sidebar {
@@ -1612,11 +1718,75 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .courses .navigat .content-courses .section-courses h2::before {
   background-color: white;
-  width: 150px;
+  width: 129px;
   left: 50%;
+}
+.courses .navigat .content-courses .section-courses .section .column {
+  padding: 10px !important;
+}
+@media (min-width: 1600px) {
+  .courses .navigat .content-courses .section-courses .section .column {
+    width: 20%;
+  }
+}
+@media (max-width: 992px) {
+  .courses .navigat .content-courses .section-courses .section .column {
+    padding: 14px !important;
+  }
+}
+@media (max-width: 1300px) {
+  .courses .navigat .content-courses .section-courses .section .col-md-4 {
+    width: 33.3333333333%;
+  }
+}
+@media (max-width: 1100px) {
+  .courses .navigat .content-courses .section-courses .section .col-md-4 {
+    width: 50%;
+  }
+}
+@media (max-width: 879px) {
+  .courses .navigat .content-courses .section-courses .section .col-12 {
+    width: 100%;
+  }
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card .card-img-top {
+  max-width: 100%;
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card .card-img {
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  left: 15px;
+  top: 15px;
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card .card-body p {
+  font-size: 14px;
+  color: gray;
+  line-height: 1.8;
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card .card-body .badge {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+  padding: 7px 10px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: -21px;
+  z-index: 5;
+  background-color: #3f75ff;
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card hr {
+  opacity: 0.1;
+}
+.courses .navigat .content-courses .section-courses .section .courses-Control .card .badge-gro .badge {
+  color: gray;
 }
 
 .friends .navigat .sidebar {
+  min-height: 100vh;
   width: 200px;
 }
 @media (max-width: 568px) {
@@ -1713,6 +1883,7 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .friends .navigat .content-friends .section-friends {
   background-color: #f1f5f9;
+  min-height: 92vh;
 }
 .friends .navigat .content-friends .section-friends h2 {
   width: -webkit-fit-content;
@@ -1736,13 +1907,96 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .friends .navigat .content-friends .section-friends h2::after {
   background-color: black;
-  width: 60px;
-  left: 24%;
+  width: 50px;
+  left: 27%;
 }
 .friends .navigat .content-friends .section-friends h2::before {
   background-color: white;
-  width: 150px;
+  width: 97px;
   left: 50%;
+}
+.friends .navigat .content-friends .section-friends .section .column {
+  padding: 10px !important;
+}
+@media (min-width: 1620px) {
+  .friends .navigat .content-friends .section-friends .section .column {
+    width: 20%;
+  }
+}
+@media (max-width: 992px) {
+  .friends .navigat .content-friends .section-friends .section .column {
+    padding: 14px !important;
+  }
+}
+@media (max-width: 1360px) {
+  .friends .navigat .content-friends .section-friends .section .col-md-4 {
+    width: 33.3333333333%;
+  }
+}
+@media (max-width: 1100px) {
+  .friends .navigat .content-friends .section-friends .section .col-md-4 {
+    width: 50%;
+  }
+}
+@media (max-width: 879px) {
+  .friends .navigat .content-friends .section-friends .section .col-12 {
+    width: 100%;
+  }
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .card-head .card-img-top {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .card-head p {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 10px;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .contact {
+  border: 2px solid white;
+  left: 8px;
+  top: 8px;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .contact svg {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 50%;
+  color: gray;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .contact svg:hover {
+  background-color: #3f75ff;
+  color: white;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .card-body .icon svg {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .card-body .icon span {
+  font-size: 14px;
+  font-weight: 600;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .card-body .vip {
+  color: #fbeccc;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card hr {
+  opacity: 0.1;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .badge-gro span {
+  color: gray;
+  font-size: 13px;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .badge-gro .bg-blue {
+  background-color: #3f75ff;
+  padding: 7px;
+}
+.friends .navigat .content-friends .section-friends .section .Friends-Control .card .badge-gro .bg-red {
+  background-color: #e74133;
+  padding: 7px;
 }
 
 .files .navigat .sidebar {
@@ -1865,13 +2119,165 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .files .navigat .content-files .section-files h2::after {
   background-color: black;
-  width: 60px;
-  left: 24%;
+  width: 30px;
+  left: 27%;
 }
 .files .navigat .content-files .section-files h2::before {
   background-color: white;
-  width: 150px;
+  width: 60px;
   left: 50%;
+}
+@media (max-width: 767px) {
+  .files .navigat .content-files .section-files .section-gro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.files .navigat .content-files .section-files .section {
+  width: calc(100% - 300px);
+}
+@media (max-width: 767px) {
+  .files .navigat .content-files .section-files .section {
+    width: 100%;
+  }
+}
+.files .navigat .content-files .section-files .section .column {
+  padding: 10px !important;
+}
+@media (max-width: 1670px) {
+  .files .navigat .content-files .section-files .section .column {
+    width: 20%;
+  }
+}
+@media (max-width: 992px) {
+  .files .navigat .content-files .section-files .section .column {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 1550px) {
+  .files .navigat .content-files .section-files .section .col-md-3 {
+    width: 25%;
+  }
+}
+@media (max-width: 1400px) {
+  .files .navigat .content-files .section-files .section .col-md-3 {
+    width: 33.3333333333%;
+  }
+}
+@media (max-width: 1190px) {
+  .files .navigat .content-files .section-files .section .col-md-3 {
+    width: 50%;
+  }
+}
+@media (max-width: 950px) {
+  .files .navigat .content-files .section-files .section .col-12 {
+    width: 100%;
+  }
+}
+.files .navigat .content-files .section-files .section .files-Control .card .card-head .card-img-top {
+  width: 70px;
+  height: 70px;
+}
+.files .navigat .content-files .section-files .section .files-Control .card .card-head h3 {
+  font-size: 14px;
+}
+.files .navigat .content-files .section-files .section .files-Control .card .contact {
+  left: 0;
+  top: 0;
+}
+.files .navigat .content-files .section-files .section .files-Control .card .contact svg {
+  padding: 10px;
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+}
+.files .navigat .content-files .section-files .section .files-Control .card .card-body .icon span {
+  font-size: 13px;
+  font-weight: 600;
+  color: gray;
+}
+.files .navigat .content-files .section-files .section .files-Control .card hr {
+  opacity: 0.1;
+}
+.files .navigat .content-files .section-files .section .files-Control .card .badge-gro .badge {
+  color: gray;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0;
+}
+.files .navigat .content-files .section-files .section-2 {
+  width: 290px;
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .files .navigat .content-files .section-files .section-2 {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .files .navigat .content-files .section-files .section-2 {
+    padding: 10px !important;
+  }
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads hr {
+  opacity: 0.1;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads {
+  border: 1px solid #eee;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads h5 {
+  font-size: 13px;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads img {
+  width: 40px;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .text-uploads p {
+  font-size: 13px;
+  color: gray;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .badge {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: gray;
+  font-weight: 500;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .icon {
+  padding: 14px;
+  margin-right: 7px;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .blue {
+  color: #0075ff;
+  background-color: rgba(0, 117, 255, 0.2);
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .green {
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.2);
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .red {
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.2);
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .card-uploads .section-uploads .orange {
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.2);
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .Upload .badge-up {
+  background-color: #0075ff;
+  padding: 10px 17px;
+  font-weight: 500;
+  font-size: 13px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .Upload .badge-up:hover {
+  background-color: rgba(0, 0, 255, 0.733);
+}
+.files .navigat .content-files .section-files .section-2 .files-Control .card .Upload .badge-up:hover svg {
+  -webkit-animation: go-up 0.8s infinite;
+          animation: go-up 0.8s infinite;
 }
 
 .plans .navigat .sidebar {
@@ -1971,6 +2377,7 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .plans .navigat .content-plans .section-plans {
   background-color: #f1f5f9;
+  min-height: 92vh;
 }
 .plans .navigat .content-plans .section-plans h2 {
   width: -webkit-fit-content;
@@ -1994,11 +2401,128 @@ header .navigat .content article .section .table-project .project .project-table
 }
 .plans .navigat .content-plans .section-plans h2::after {
   background-color: black;
-  width: 60px;
-  left: 24%;
+  width: 50px;
+  left: 25%;
 }
 .plans .navigat .content-plans .section-plans h2::before {
   background-color: white;
-  width: 150px;
-  left: 50%;
+  width: 100px;
+  left: 59%;
+}
+@media (max-width: 1450px) {
+  .plans .navigat .content-plans .section-plans .section .col-md-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .plans .navigat .content-plans .section-plans .section .col-12 {
+    width: 100%;
+  }
+}
+@media (max-width: 1300px) {
+  .plans .navigat .content-plans .section-plans .section .column {
+    padding: 7px !important;
+  }
+}
+@media (max-width: 992px) {
+  .plans .navigat .content-plans .section-plans .section .column {
+    padding: 10px !important;
+  }
+}
+.plans .navigat .content-plans .section-plans .section .plan ul {
+  list-style: none;
+  padding: 0;
+}
+.plans .navigat .content-plans .section-plans .section .plan ul li {
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.plans .navigat .content-plans .section-plans .section .plan ul li svg {
+  color: red;
+}
+.plans .navigat .content-plans .section-plans .section .plan ul li .yes {
+  color: #5fc65f;
+}
+.plans .navigat .content-plans .section-plans .section .plan ul li .help {
+  color: gray;
+  margin-left: auto;
+}
+.plans .navigat .content-plans .section-plans .section .green .top {
+  color: white;
+  background-color: #5fc65f;
+  border: 3px solid white;
+  outline: 3px solid #5fc65f;
+}
+.plans .navigat .content-plans .section-plans .section .green .top .price {
+  font-size: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.plans .navigat .content-plans .section-plans .section .green .top .price span {
+  font-size: 25px;
+  position: absolute;
+  left: -15px;
+  top: 0;
+}
+.plans .navigat .content-plans .section-plans .section .green .bg-green {
+  background-color: #5fc65f;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  font-size: 15px;
+}
+.plans .navigat .content-plans .section-plans .section .blue .top {
+  color: white;
+  background-color: #3f75ff;
+  border: 3px solid white;
+  outline: 3px solid #3f75ff;
+}
+.plans .navigat .content-plans .section-plans .section .blue .top .price {
+  font-size: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.plans .navigat .content-plans .section-plans .section .blue .top .price span {
+  font-size: 25px;
+  position: absolute;
+  left: -15px;
+  top: 0;
+}
+.plans .navigat .content-plans .section-plans .section .blue .bg-blue {
+  background-color: #3f75ff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  font-size: 15px;
+}
+.plans .navigat .content-plans .section-plans .section .orange .top {
+  color: white;
+  background-color: #ee9d1e;
+  border: 3px solid white;
+  outline: 3px solid #ee9d1e;
+}
+.plans .navigat .content-plans .section-plans .section .orange .top .price {
+  font-size: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.plans .navigat .content-plans .section-plans .section .orange .top .price span {
+  font-size: 25px;
+  position: absolute;
+  left: -15px;
+  top: 0;
+}
+.plans .navigat .content-plans .section-plans .section .orange p {
+  color: gray;
 }
